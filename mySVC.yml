@@ -4,6 +4,7 @@ metadata:
    name: myjavaapp-svc
    labels:
      app: myjavaapp
+     version: 2.60.1
     
  
 spec:
@@ -14,4 +15,5 @@ spec:
     protocol: TCP
   selector:
      app: myjavaapp
+     version: 2.60.1
     
