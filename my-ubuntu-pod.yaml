@@ -12,4 +12,5 @@ spec:
           name: app-volume
   volumes:
     - name: app-volume
-      emptyDir: {}
+      hostPath:
+        path:  /home/ubuntu/myhostpath # Replace this with a valid path on your machine
