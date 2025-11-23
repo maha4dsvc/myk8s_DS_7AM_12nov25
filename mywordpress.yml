@@ -27,21 +27,7 @@ spec:
           ports:
           - containerPort: 80
             name: http
-          env: 
-            - name: WORDPRESS_DB_HOST
-              value: mariadb-service
-            - name: WORDPRESS_DB_USER
-              valueFrom:
-                  secretKeyRef:
-                    name: my-mariadb-secret
-                    key: username
-            - name: WORDPRESS_DB_PASSWORD
-              valueFrom:
-                  secretKeyRef:
-                    name: my-mariadb-secret
-                    key: password
-            - name: WORDPRESS_DB_NAME
-              value: wp
+          
 ---
 apiVersion: v1
 kind: Service
