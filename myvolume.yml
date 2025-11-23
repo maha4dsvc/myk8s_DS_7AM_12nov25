@@ -10,3 +10,17 @@ spec:
   storageClassName: hostpath
   hostPath:
     path:  /home/ubuntu/local-pv # Replace this with a valid path on your machine
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: local-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi
+  storageClassName: hostpath
+  
